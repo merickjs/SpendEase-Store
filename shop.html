@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendEase Store</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/splide-custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css"
+    />
+  </head>
+  <body>
+    <header
+      class="main-header bg-white flex justify-around fixed z-30 w-full h-[5.5rem] gap-x-5 items-center border-b border[#f2f2f2]"
+    >
+      <div class="header-mobile text-2xl flex md:hidden">
+        <i class="bi bi-list"></i>
+      </div>
+      <div class="header-left">
+        <a class="header-logo text-2xl" href="/"
+          >Spend<span class="text-purple-600">Ease</span></a
+        >
+      </div>
+      <div class="header-center">
+        <ul
+          class="header-links md:flex flex bg-white md:border-0 border-r border-gray-200 transition-transform duration-300 h-screen items-center justify-start md:justify-center md:p-0 pt-24 z-10 gap-6 text-lg md:static absolute md:flex-row flex-col md:w-0 w-48 left-0 top-0 -translate-x-48 md:translate-x-0"
+        >
+          <li class="md:hidden absolute top-10 right-5 text-xl">
+            <i class="bi bi-x-circle close-sidebar"></i>
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a class="header-link hover:text-red-600 duration-200" href="/"
+              >Home</a
+            >
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a class="header-link hover:text-red-600 duration-200" href="/"
+              >Shop</a
+            >
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a class="header-link hover:text-red-600 duration-200" href="/"
+              >Blog</a
+            >
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a
+              href="/contact"
+              class="header-link hover:text-red-600 duration-200"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="header-right flex items-center gap-x-4 md:m-0 -ml-10">
+        <a href="/home" class="header-person-button text-2xl">
+          <i class="bi bi-person"></i>
+        </a>
+        <button class="header-search-button text-xl">
+          <i class="bi bi-search"></i>
+        </button>
+        <a href="/home" class="header-heart-button text-xl">
+          <i class="bi bi-heart"></i>
+        </a>
+        <a href="/home" class="header-cart text-xl">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
+    </header>
+    <section class="modal-search">
+      <div
+        class="modal-wrapper w-full h-auto fixed border-b border-[#f2f2f2] -translate-y-[149rem] flex bg-white transition-all duration-500 z-30 justify-center flex-col gap-y-8 items-center"
+      >
+        <button class="search-close absolute text-3xl right-4 top-2">
+          <i class="bi bi-x"></i>
+        </button>
+        <h2 class="modal-title text-3xl pt-6">Search Our Site</h2>
+        <div class="search-form relative flex flex-col items-center">
+          <input
+            type="text"
+            class="search-input w-[60rem] p-3 rounded-full border border-gray-400"
+            placeholder="I'm looking for..."
+          />
+          <i
+            class="bi bi-search absolute right-6 top-[10px] cursor-pointer"
+          ></i>
+        </div>
+
+        <div class="quick-search flex">
+          <p class="quick-paragraph text-gray-400 pr-1">Quick Search:</p>
+          <ul class="quick-search-list flex gap-2">
+            <li class="quick-item">
+              <a class="hover:text-gray-500 cursor-pointer">Yellow,</a>
+            </li>
+            <li class="quick-item">
+              <a class="hover:text-gray-500 cursor-pointer">Blue,</a>
+            </li>
+            <li class="quick-item">
+              <a class="hover:text-gray-500 cursor-pointer">Black</a>
+            </li>
+          </ul>
+        </div>
+        <h1 class="font-semibold lg:text-base text-sm text-left">
+          Results From Products
+        </h1>
+        <div class="search-product-container">
+          <ul class="search-product-list flex gap-4">
+            <li
+              class="search-product-item flex relative justify-center items-center flex-col gap-y-1 w-1/4 mb-9"
+            >
+              <a href="" class="border border-[#f2f2f2]">
+                <img
+                  src="/images/products/bluecar.png"
+                  class="w-[50.75rem] bg-[#f3f3f3] object-contain"
+                />
+                <img
+                  src="images/products/bluecar2.png"
+                  class="w-[50.75rem] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity bg-[#f3f3f3] duration-200"
+                />
+                <p class="product-name p-4 text-center font-medium">Red Car</p>
+                <p class="product-price p-2 text-center text-red-500">$50.00</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="shop-banner w-full">
+      <div class="shop-banner-wrapper w-full relative ">
+        <img src="images/banner/shop-banner.jpg" alt="" class="w-full h-[20rem] object-cover ">
+    <div class="content absolute top-1/2 left-1/2 -translate-x-1/2 text-white flex flex-col gap-2 ">
+      <h1 class="text-5xl">Shop</h1>
+      <div class="links">
+        <a href="/" class="hover:text-gray-500">Home</a>
+        <span>/</span>
+        <a>Shop</a>
+      </div>
+    </div>
+      </div>
+    </section>
+<section class="splide product-wrapper3 flex justify-center items-center flex-col relative">
+  <h1
+    class="product-title text-3xl font-medium text-center pt-28 pb-6"
+  >
+    Trending Products
+  </h1>
+  <p class="product-title-desc text-xs md:text-sm  px-6 pb-16 ">Here’s some of our most popular products people are in love with.</p>
+  <div class="splide__track max-w-[75rem] flex justify-center items-center">
+    <ul class="splide__list flex  max-w-[75rem]">
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/redcar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/redcar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/astonmartin.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/astonmartin2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/giorgio-travito.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/giorgio-travito2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/graycar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/graycar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/oldcar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/oldcar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/bluecar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/bluecar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links  absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play splide-play"></span>
+    <span class="splide__toggle__pause"></span>
+  </button>
+  <div class="splide__arrows splide__arrows--ltr">
+    <button
+      class="splide__arrow splide__arrow--prev"
+      type="button"
+      aria-label="Previous slide"
+      aria-controls="splide01-track"
+    >
+      <i class="bi bi-chevron-left splide-arrow-left"></i>
+    </button>
+    <button
+      class="splide__arrow splide__arrow--next"
+      type="button"
+      aria-label="Next slide"
+      aria-controls="splide01-track"
+    >
+      <i class="bi bi-chevron-right splide-arrow-right"></i>
+    </button>
+  </div>
+</section>
+<section class="banners flex flex-col justify-center items-center ">
+  <h1 class=" text-3xl font-medium pt-14 pb-20">Opportunities for you</h1>
+<div class="banner-wrapper flex lg:flex-row flex-col gap-10" >
+  <div class="left-banner md:flex-row flex-col flex lg:ml-8 bg-[#f3f3f3]">
+    <div class="banner-content p-5">
+    <h3 class=" text-sm pt-16 pl-10 pb-5">HURRY UP! SALE 50% OFF</h3>
+      <h2 class="text-4xl px-10 pb-8  font-normal ">Top Trends Cars</h2> 
+      <p class="text-sm text-gray-600 px-10">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <button class="p-4 m-10 w-40 bg-black text-white text-sm rounded-[2.5rem]  hover:text-black  hover:bg-transparent border border-black">Shop Now</button>
+    </div>
+    <div class="banner-img p-10">
+      <img src="images/banner/isaacmartin.png
+      " class="w-64">
+    </div>
+  </div>
+  <div class="right-banner lg:mr-8 flex md:flex-row flex-col bg-[#f3f3f3]">
+    <div class="banner-content p-5">
+    <h3 class=" text-sm pt-16 pl-10 pb-5">PREMIUM-PRODUCTS</h3>
+      <h2 class="text-4xl px-10 pb-8  font-normal ">Here’s To You</h2> 
+      <p class="text-sm text-gray-600 px-10">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <button class="p-4 m-10 w-40 bg-black text-white text-sm rounded-[2.5rem]  hover:text-black  hover:bg-transparent border border-black">Shop Now</button>
+    </div>
+    <div class="banner-img p-10">
+      <img src="images/banner/nissangtr.png" class="w-64">
+      <img src="images/banner/haidam.png" class="w-64">
+    </div>
+  </div>
+
+</div>
+
+</section>
+<section class="splide product-wrapper4 flex justify-center items-center flex-col relative mb-10 ">
+  <h1
+    class="product-title text-3xl font-medium text-center pt-28 pb-6"
+  >
+    New Arrivals
+  </h1>
+  <p class="product-title-desc text-xs md:text-sm  px-6 pb-16 ">Here’s some of new arrivals people are in love with.</p>
+  <div class="splide__track max-w-[75rem] flex justify-center items-center">
+    <ul class="splide__list flex  max-w-[75rem]">
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/redcar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/redcar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/astonmartin.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/astonmartin2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/giorgio-travito.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/giorgio-travito2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/graycar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/graycar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/oldcar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/oldcar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links   absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+
+      <li
+        class="splide__slide splide-slide product-item flex flex-col w-1/4 h-full relative"
+      >
+        <div class="product-img cursor-pointer bg-white">
+          <img
+            src="images/products/bluecar.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain"
+          />
+          <img
+            src="images/products/bluecar2.png"
+            class="w-[28rem] h-[23.6875rem] bg-[#f3f3f3] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
+        <div
+          class="discount w-12 h-6 bg-red-600 top-3 text-sm left-5 text-white rounded-full flex justify-center items-center absolute"
+        >
+          -33%
+        </div>
+
+        <div
+          class="product-links  absolute opacity-0 -right-12  top-12 gap-y-2 flex flex-col"
+        >
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-heart text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-eye text-lg"></i>
+          </button>
+
+          <button
+            class="w-10 h-10 bg-white text-black rounded-full flex justify-center items-center hover:bg-black hover:text-white"
+          >
+            <i class="bi bi-cart text-lg"></i>
+          </button>
+        </div>
+
+        <div
+          class="product-info flex flex-col items-center justify-center border-2 border-[#f2f2f2]"
+        >
+          <p class="product-name text-left font-semibold py-2">Blue Car</p>
+          <div class="product-star text-xs text-gray-800 py-2">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="product-price py-3 text-red-500">$58.00</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <button class="splide__toggle" type="button">
+    <span class="splide__toggle__play splide-play"></span>
+    <span class="splide__toggle__pause"></span>
+  </button>
+  <div class="splide__arrows splide__arrows--ltr">
+    <button
+      class="splide__arrow splide__arrow--prev"
+      type="button"
+      aria-label="Previous slide"
+      aria-controls="splide01-track"
+    >
+      <i class="bi bi-chevron-left splide-arrow-left"></i>
+    </button>
+    <button
+      class="splide__arrow splide__arrow--next"
+      type="button"
+      aria-label="Next slide"
+      aria-controls="splide01-track"
+    >
+      <i class="bi bi-chevron-right splide-arrow-right"></i>
+    </button>
+  </div>
+</section>
+<section class="policy pb-6 mb-20 border-b border-[#f2f2f2]">
+  <div class="policy-wrapper w-full  border-t border[#f2f2f2]">
+    <ul class="policy-list flex md:flex-row flex-col md:m-0 ml-11 justify-around pt-6">
+      <li class="policy-item flex items-center gap-x-5">
+        <i class="bi bi-truck lg:text-5xl text-3xl"></i>
+        <div class="policy-desc ">
+          <h3 class="font-semibold lg:text-base text-sm">FREE DELIVERY</h3>
+          <p class="text-xs">From $49.90</p>
+        </div>
+      </li>
+        
+      <li class="policy-item flex items-center gap-x-5">
+        <i class="bi bi-headset lg:text-5xl text-3xl"></i>
+        <div class="policy-desc ">
+          <h3 class="font-semibold lg:text-base text-sm">
+            SUPPORT 24/7</h3>
+            <p class="text-xs">Online 24 hours</p>
+        </div>
+      </li>
+      <li class="policy-item flex items-center gap-x-5">
+        <i class="bi bi-arrow-clockwise lg:text-5xl text-3xl"></i>
+        <div class="policy-desc ">
+          <h3 class="font-semibold lg:text-base text-sm">30 DAYS RETURN</h3>
+          <p class="text-xs">Simply return it within 30 days</p>
+        </div>
+      </li>
+      <li class="policy-item flex items-center gap-x-5">
+        <i class="bi bi-credit-card lg:text-5xl text-3xl"></i>
+        <div class="policy-desc ">
+          <h3 class="font-semibold lg:text-base text-sm">PAYMENT METHOD</h3>
+          <p class="text-xs">Secure Payment</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<footer class="footer w-full flex flex-col">
+  <div class="footer-row w-full flex lg:flex-row flex-col md:justify-around ">
+    <div class="footer-left flex flex-col justify-center lg:items-start items-center">
+<div class="footer-logo py-8 px-8">
+  <a class="header-logo text-2xl" href="/"
+          >Spend<span class="text-purple-600">Ease</span></a
+        >
+</div>
+<div class="contact-info flex flex-col gap-y-4 px-8 lg:items-start items-center">
+  <p class="w-80 text-sm text-[#555555]">Flat 5, 38-40 Cambridge Gardens
+    Notting Hill, London W10 6JE
+    United Kingdom</p>
+    <a href="tel:555 555 5555" class="text-sm text-[#555555]">(+900) 1234 5678 90</a>
+    <a href="mailto:spendEase@example.com" class="text-sm text-[#555555]">SpendEase@example.com</a>
+      </div>
+<ul class="social-list flex gap-x-4 px-8 py-10">
+  <li class="social-item">
+    <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+      <i class="bi bi-twitter  text-sm"></i>
+    </a>
+  </li>
+  <li class="social-item">
+    <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+      <i class="bi bi-facebook  text-sm"></i>
+    </a>
+  </li>
+  <li class="social-item">
+    <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+      <i class="bi bi-github  text-sm"></i>
+    </a>
+  </li>
+  <li class="social-item">
+    <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+      <i class="bi bi-instagram  text-sm"></i>
+    </a>
+  </li>
+</ul>
+</div>
+<div class="footer-center flex md:gap-x-28 gap-x-8 justify-center">
+  <ul class="footer-list">
+    <li class="footer-list-title text-lg font-medium pb-6">Company</li>
+    <li class="pb-4"><a href="" class="text-[#555555]">About Us</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Our Stores</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Contact Us</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Size Guide</a></li>
+    <li><a href="" class="text-[#555555]">My Account</a></li>
+  </ul>
+  <ul class="footer-list px-8">
+    <li class="footer-list-title text-lg font-medium pb-6">Privacy Policy</li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Refund Policy</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Shipping & Return</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Term & Conditions</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Advanced Search</a></li>
+    <li class="pb-4"><a href="" class="text-[#555555]">Theme FAQs</a></li>
+    <li class=""><a href="" class="text-[#555555]">Store Locations</a></li>
+  </ul>
+</div>
+<div class="footer-right flex flex-col gap-y-5  items-center  pt-9">
+  <h2 class="signup-title text-lg font-medium">Sign Up The Newsletter</h2>
+  <p class="text-[#555555] text-sm text-center">Enter your email address to get $10 off your first order and free shipping.</p>
+<div class="subscribe flex gap-x-2">
+<input type="email" class="md:w-80 w-60 p-2 rounded-[2.5rem] border outline-none border-gray-400 pl-5 placeholder:text-sm" placeholder="Enter Your email..">
+<button class="p-4 rounded-[2.5rem] bg-black text-white text-sm md:w-40 w-32">Subscribe</button>
+</div>
+</div>
+  </div>
+  <div class="footer-copyright flex justify-around border-t flex-col lg:flex-row gap-y-6 items-center border-[#f2f2f2] pt-10 my-9">
+    <p class="text-xs text-[#555555] text-center">
+      © 2023 SpendEase Store. All Rights Reserved.
+Developed By MericK
+      
+      </p>
+      <img src="images/banner/payment.png">
+      <ul class="flex ">
+        <li class="border-r border[#f2f2f2] px-2 text-xs text-[#555555]"><a href="/home">Privacy Policy</a></li>
+        <li class="border-r border[#f2f2f2] px-2 text-xs text-[#555555]"><a href="/home">Terms & Conditions</a></li>
+        <li class=" pl-2 text-xs text-[#555555]"><a href="/home">Returns Policy</a></li>
+      </ul>
+  </div>
+</footer>
+
+<script src="js/splide.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
+  </body>
+</html>
