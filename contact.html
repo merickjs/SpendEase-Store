@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendEase Store</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header
+      class="main-header bg-white flex justify-around fixed z-30 w-full h-[5.5rem] gap-x-5 items-center border-b border[#f2f2f2]"
+    >
+      <div class="header-mobile text-2xl flex md:hidden">
+        <i class="bi bi-list"></i>
+      </div>
+      <div class="header-left">
+        <a class="header-logo text-2xl" href="/"
+          >Spend<span class="text-purple-600">Ease</span></a
+        >
+      </div>
+      <div class="header-center">
+        <ul
+          class="header-links md:flex flex bg-white md:border-0 border-r border-gray-200 transition-transform duration-300 h-screen items-center justify-start md:justify-center md:p-0 pt-24 z-10 gap-6 text-lg md:static absolute md:flex-row flex-col md:w-0 w-48 left-0 top-0 -translate-x-48 md:translate-x-0"
+        >
+          <li class="md:hidden absolute top-10 right-5 text-xl">
+            <i class="bi bi-x-circle close-sidebar"></i>
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a class="header-link hover:text-red-600 duration-200" href="/"
+              >Home</a
+            >
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a class="header-link hover:text-red-600 duration-200" href="/shop"
+              >Shop</a
+            >
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a class="header-link hover:text-red-600 duration-200" href="/blog"
+              >Blog</a
+            >
+          </li>
+          <li class="header-item md:p-0 py-7">
+            <a
+              href="/contact"
+              class="header-link hover:text-red-600 duration-200"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="header-right flex items-center gap-x-4 md:m-0 -ml-10">
+        <a href="/home" class="header-person-button text-2xl">
+          <i class="bi bi-person"></i>
+        </a>
+        <button class="header-search-button text-xl">
+          <i class="bi bi-search"></i>
+        </button>
+        <a href="/home" class="header-heart-button text-xl">
+          <i class="bi bi-heart"></i>
+        </a>
+        <a href="/home" class="header-cart text-xl">
+          <i class="bi bi-cart"></i>
+        </a>
+      </div>
+    </header>
+    <section class="modal-search">
+      <div
+        class="modal-wrapper w-full h-auto fixed border-b border-[#f2f2f2] -translate-y-[149rem] flex bg-white transition-all duration-500 z-30 justify-center flex-col gap-y-8 items-center"
+      >
+        <button class="search-close absolute text-3xl right-4 top-2">
+          <i class="bi bi-x"></i>
+        </button>
+        <h2 class="modal-title text-3xl pt-6">Search Our Site</h2>
+        <div class="search-form relative flex flex-col items-center">
+          <input
+            type="text"
+            class="search-input w-[60rem] p-3 rounded-full border border-gray-400"
+            placeholder="I'm looking for..."
+          />
+          <i
+            class="bi bi-search absolute right-6 top-[10px] cursor-pointer"
+          ></i>
+        </div>
+
+        <div class="quick-search flex">
+          <p class="quick-paragraph text-gray-400 pr-1">Quick Search:</p>
+          <ul class="quick-search-list flex gap-2">
+            <li class="quick-item">
+              <a class="hover:text-gray-500 cursor-pointer">Yellow,</a>
+            </li>
+            <li class="quick-item">
+              <a class="hover:text-gray-500 cursor-pointer">Blue,</a>
+            </li>
+            <li class="quick-item">
+              <a class="hover:text-gray-500 cursor-pointer">Black</a>
+            </li>
+          </ul>
+        </div>
+        <h1 class="font-semibold lg:text-base text-sm text-left">
+          Results From Products
+        </h1>
+        <div class="search-product-container">
+          <ul class="search-product-list flex gap-4">
+            <li
+              class="search-product-item flex relative justify-center items-center flex-col gap-y-1 w-1/4 mb-9"
+            >
+              <a href="" class="border border-[#f2f2f2]">
+                <img
+                  src="/images/products/bluecar.png"
+                  class="w-[50.75rem] bg-[#f3f3f3] object-contain"
+                />
+                <img
+                  src="images/products/bluecar2.png"
+                  class="w-[50.75rem] object-contain absolute top-0 opacity-0 hover:opacity-100 transition-opacity bg-[#f3f3f3] duration-200"
+                />
+                <p class="product-name p-4 text-center font-medium">Red Car</p>
+                <p class="product-price p-2 text-center text-red-500">$50.00</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="login-register w-full h-full fixed top-1/4 md:left-1/3 -left-[53px]  invisible block opacity-100  z-50">
+      
+      <form class=" login-form bg-white flex flex-col   gap-5 items-center w-[32rem] h-[30rem] border-2 border-white rounded-xl relative">
+        <h2 class="text-2xl mt-8">Login</h2>
+        <input type="email"    class="w-[25rem] p-3  rounded-xl border outline-none border-gray-400 focus:border-black text-sm " placeholder="Your email*">
+        <input type="password" class="w-[25rem] p-3  rounded-xl border outline-none border-gray-400 focus:border-black text-sm "  placeholder="Password*">
+        <p class="forgot  text-[#555555] self-start mx-14 cursor-pointer">Forgot your password?</p>
+        <button class="text-sm p-4 bg-black rounded-[2.5rem] w-[25rem] text-white" type="button">LOGIN</button>
+        <button class="text-sm p-4 bg-white border uppercase rounded-[2.5rem] w-[25rem] hover:bg-black hover:text-white duration-300" type="button">Create Account</button>
+        <button class="absolute right-5 text-2xl top-2 " type="button"><i class="bi bi-x"></i></button>
+      </form>
+          </section>
+    <div class="location w-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4235.100142984591!2d-0.20966776338762388!3d51.51840648470011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1685831826003!5m2!1str!2str"
+        width="100%"
+        height="550"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <section class="contact-us mb-40 mt-14">
+      <div class="contact-wrapper gap-10 flex flex-col">
+        <div class="contact-start">
+          <h2 class="text-4xl px-11 pb-5">Here To Help</h2>
+          <p class="desc text-sm px-11 text-[#555555]">
+            To get help, you can reach out to the following addresses:
+          </p>
+          <div class="locations flex justify-around lg:flex-row flex-col gap-6">
+            <div class="contact-info-container">
+              <div class="logo-wrapper lg:text-left text-center py-8 px-8">
+                <a class="logo text-xl"
+                  >Spend<span class="text-purple-600">Ease</span
+                  >&nbsp;-&nbsp;London</a
+                >
+              </div>
+              <div
+                class="contact-info flex flex-col gap-y-4 px-8 lg:items-start items-center"
+              >
+                <p class="text-sm text-[#555555]">
+                  Cambridge Gardens Notting Hill, London W10 6JE United Kingdom
+                </p>
+                <a href="tel:555 555 5555" class="text-sm text-[#555555]"
+                  >(+900) 1234 5678 90</a
+                >
+                <a
+                  href="mailto:spendEase@example.com"
+                  class="text-sm text-[#555555]"
+                  >SpendEase@example.com</a
+                >
+                <p class="text-sm text-[#555555]">
+                  Opening Hours: Everyday 9:00 am - 6:00 pm
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-container">
+              <div class="logo-wrapper lg:text-left text-center py-8 px-8">
+                <a class="logo text-xl"
+                  >Spend<span class="text-purple-600">Ease</span
+                  >&nbsp;-&nbsp;United States</a
+                >
+              </div>
+              <div
+                class="contact-info flex flex-col gap-y-4 px-8 lg:items-start items-center"
+              >
+                <p class="w-80 text-sm text-[#555555]">
+                  1234 Broadway, New York, NY 10001, United States
+                </p>
+                <a href="tel:555 555 5555" class="text-sm text-[#555555]"
+                  >(+900) 1234 5678 90</a
+                >
+                <a
+                  href="mailto:spendEase@example.com"
+                  class="text-sm text-[#555555]"
+                  >SpendEase@example.com</a
+                >
+                <p class="text-sm text-[#555555]">
+                  Opening Hours: Everyday 9:00 am - 6:00 pm
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-container">
+              <div class="logo-wrapper lg:text-left text-center py-8">
+                <a class="logo text-xl"
+                  >Spend<span class="text-purple-600">Ease</span
+                  >&nbsp;-&nbsp;Germany</a
+                >
+              </div>
+              <div
+                class="contact-info flex flex-col gap-y-4 lg:items-start items-center"
+              >
+                <p class="w-80 text-sm text-[#555555]">
+                  Mehringdamm 50, 10961 Berlin, Germany
+                </p>
+                <a href="tel:555 555 5555" class="text-sm text-[#555555]"
+                  >(+900) 1234 5678 90</a
+                >
+                <a
+                  href="mailto:spendEase@example.com"
+                  class="text-sm text-[#555555]"
+                  >SpendEase@example.com</a
+                >
+                <p class="text-sm text-[#555555]">
+                  Opening Hours: Everyday 9:00 am - 6:00 pm
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="get-in-touch flex flex-col gap-7">
+          <div class="header">
+            <h2 class="title text-3xl px-14 pb-5 font-medium">Get In Touch</h2>
+            <p class="desc text-sm text-[#555555] px-14">
+              Your customer feedback is valuable to us. It helps us enhance our
+              service quality and improve customer satisfaction. Thank you for
+              taking the time to share your thoughts with us!
+            </p>
+          </div>
+
+          <form class="contact-form flex flex-col gap-6">
+            <div class="customer-info flex justify-evenly gap-4">
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full p-3 placeholder:text-[13px] border border-[#55555] ml-14 outline-none focus:border focus:border-slate-700 rounded-md"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="w-full p-3 placeholder:text-[13px] border border-[#55555] mr-14 outline-none focus:border focus:border-slate-700 rounded-md"
+              />
+            </div>
+            <div class="comment flex">
+              <textarea
+                class="w-full mx-14 p-3 placeholder:text-[13px] border border-[#55555] outline-none focus:border focus:border-slate-700 rounded-md"
+                rows="7"
+                placeholder="Comment"
+              ></textarea>
+            </div>
+            <div class="flex items-center gap-x-2 ml-14">
+              <input type="checkbox" id="checkbox" class="h-4 w-4  accent-black" />
+              <label for="checkbox" class="text-[#555555]">
+                Save my name, email, and website in this browser for the next
+                time I comment.</label
+              >
+            </div>
+            <div>
+              <button class="p-4 w-48 bg-black text-white rounded-[40px] ml-14 text-sm" type="button">Send Message</button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="policy pb-6 mb-20 border-b border-[#f2f2f2]">
+      <div class="policy-wrapper w-full  border-t border[#f2f2f2]">
+        <ul class="policy-list flex md:flex-row flex-col md:m-0 ml-11 justify-around pt-6">
+          <li class="policy-item flex items-center gap-x-5">
+            <i class="bi bi-truck lg:text-5xl text-3xl"></i>
+            <div class="policy-desc ">
+              <h3 class="font-semibold lg:text-base text-sm">FREE DELIVERY</h3>
+              <p class="text-xs">From $49.90</p>
+            </div>
+          </li>
+            
+          <li class="policy-item flex items-center gap-x-5">
+            <i class="bi bi-headset lg:text-5xl text-3xl"></i>
+            <div class="policy-desc ">
+              <h3 class="font-semibold lg:text-base text-sm">
+                SUPPORT 24/7</h3>
+                <p class="text-xs">Online 24 hours</p>
+            </div>
+          </li>
+          <li class="policy-item flex items-center gap-x-5">
+            <i class="bi bi-arrow-clockwise lg:text-5xl text-3xl"></i>
+            <div class="policy-desc ">
+              <h3 class="font-semibold lg:text-base text-sm">30 DAYS RETURN</h3>
+              <p class="text-xs">Simply return it within 30 days</p>
+            </div>
+          </li>
+          <li class="policy-item flex items-center gap-x-5">
+            <i class="bi bi-credit-card lg:text-5xl text-3xl"></i>
+            <div class="policy-desc ">
+              <h3 class="font-semibold lg:text-base text-sm">PAYMENT METHOD</h3>
+              <p class="text-xs">Secure Payment</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer w-full flex flex-col">
+      <div class="footer-row w-full flex lg:flex-row flex-col md:justify-around ">
+        <div class="footer-left flex flex-col justify-center lg:items-start items-center">
+    <div class="footer-logo py-8 px-8">
+      <a class="header-logo text-2xl" href="/"
+              >Spend<span class="text-purple-600">Ease</span></a
+            >
+    </div>
+    <div class="contact-info flex flex-col gap-y-4 px-8 lg:items-start items-center">
+      <p class="w-80 text-sm text-[#555555]">Flat 5, 38-40 Cambridge Gardens
+        Notting Hill, London W10 6JE
+        United Kingdom</p>
+        <a href="tel:555 555 5555" class="text-sm text-[#555555]">(+900) 1234 5678 90</a>
+        <a href="mailto:spendEase@example.com" class="text-sm text-[#555555]">SpendEase@example.com</a>
+          </div>
+    <ul class="social-list flex gap-x-4 px-8 py-10">
+      <li class="social-item">
+        <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+          <i class="bi bi-twitter  text-sm"></i>
+        </a>
+      </li>
+      <li class="social-item">
+        <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+          <i class="bi bi-facebook  text-sm"></i>
+        </a>
+      </li>
+      <li class="social-item">
+        <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+          <i class="bi bi-github  text-sm"></i>
+        </a>
+      </li>
+      <li class="social-item">
+        <a href="/home" class="w-9 h-9 rounded-full border border-[#555555] flex items-center text-[#555555] justify-center hover:text-black">
+          <i class="bi bi-instagram  text-sm"></i>
+        </a>
+      </li>
+    </ul>
+    </div>
+    <div class="footer-center flex md:gap-x-28 gap-x-8 justify-center">
+      <ul class="footer-list">
+        <li class="footer-list-title text-lg font-medium pb-6">Company</li>
+        <li class="pb-4"><a href="" class="text-[#555555]">About Us</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Our Stores</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Contact Us</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Size Guide</a></li>
+        <li><a href="" class="text-[#555555]">My Account</a></li>
+      </ul>
+      <ul class="footer-list px-8">
+        <li class="footer-list-title text-lg font-medium pb-6">Privacy Policy</li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Refund Policy</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Shipping & Return</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Term & Conditions</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Advanced Search</a></li>
+        <li class="pb-4"><a href="" class="text-[#555555]">Theme FAQs</a></li>
+        <li class=""><a href="" class="text-[#555555]">Store Locations</a></li>
+      </ul>
+    </div>
+    <div class="footer-right flex flex-col gap-y-5  items-center  pt-9">
+      <h2 class="signup-title text-lg font-medium">Sign Up The Newsletter</h2>
+      <p class="text-[#555555] text-sm text-center">Enter your email address to get $10 off your first order and free shipping.</p>
+    <div class="subscribe flex gap-x-2">
+    <input type="email" class="md:w-80 w-60 p-2 rounded-[2.5rem] border outline-none border-gray-400 pl-5 placeholder:text-sm" placeholder="Enter Your email..">
+    <button class="p-4 rounded-[2.5rem] bg-black text-white text-sm md:w-40 w-32">Subscribe</button>
+    </div>
+    </div>
+      </div>
+      <div class="footer-copyright flex justify-around border-t flex-col lg:flex-row gap-y-6 items-center border-[#f2f2f2] pt-10 my-9">
+        <p class="text-xs text-[#555555] text-center">
+          © 2023 SpendEase Store. All Rights Reserved.
+    Developed By MericK
+          
+          </p>
+          <img src="images/banner/payment.png">
+          <ul class="flex ">
+            <li class="border-r border[#f2f2f2] px-2 text-xs text-[#555555]"><a href="/home">Privacy Policy</a></li>
+            <li class="border-r border[#f2f2f2] px-2 text-xs text-[#555555]"><a href="/home">Terms & Conditions</a></li>
+            <li class=" pl-2 text-xs text-[#555555]"><a href="/home">Returns Policy</a></li>
+          </ul>
+      </div>
+    </footer>
+  </body>
+</html>

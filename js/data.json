@@ -2,8 +2,8 @@
   {
     "id":1,
     "name":"Red Car",
-    "img": "/images/redcar.png",
-    "hoverimg":"/images/redcar2.png",
+    "img": "/images/products/redcar.png",
+    "hoverimg":"/images/products/redcar2.png",
     "discount":30,
     "price": 45.00
   },
@@ -11,8 +11,8 @@
   {
     "id":2,
     "name":"Aston Martin ",
-    "img": "/images/astonmartin.png",
-    "hoverimg":"/images/astonmartin2.png",
+    "img": "/images/products/astonmartin.png",
+    "hoverimg":"/images/products/astonmartin2.png",
     "discount":60,
     "price": 70.00
   },
@@ -20,8 +20,8 @@
   {
     "id":3,
     "name":"Giorgio Travato",
-    "img": "/images/giorgio-travito.png",
-    "hoverimg":"/images/giorgio-travito2.png",
+    "img": "/images/products/giorgio-travito.png",
+    "hoverimg":"/images/products/giorgio-travito2.png",
     "discount":44,
     "price": 80.00
   },
@@ -29,8 +29,8 @@
   {
     "id":4,
     "name":"Gray Car",
-    "img": "/images/graycar.png",
-    "hoverimg":"/images/graycar2.png",
+    "img": "/images/products/graycar.png",
+    "hoverimg":"/images/products/graycar2.png",
     "discount":92,
     "price": 57.00
   },
@@ -38,8 +38,8 @@
   {
     "id":5,
     "name":"Old Car",
-    "img": "/images/oldcar.png",
-    "hoverimg":"/images/oldcar2.png",
+    "img": "/images/products/oldcar.png",
+    "hoverimg":"/images/products/oldcar2.png",
     "discount":85,
     "price": 65.00
   },
@@ -47,8 +47,8 @@
   {
     "id":6,
     "name":"Blue Car ",
-    "img": "/images/bluecar.png",
-    "hoverimg":"/images/bluecar2.png",
+    "img": "/images/products/bluecar.png",
+    "hoverimg":"/images/products/bluecar2.png",
     "discount":70,
     "price": 40.00
   }
