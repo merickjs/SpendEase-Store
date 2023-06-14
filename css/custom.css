@@ -1,0 +1,40 @@
+.shop-now {
+  transition: background-color ease 0.3s;
+}
+.product-links {
+  transition: ease all 0.4s;
+}
+.product-links button {
+  transition: all ease 0.2s;
+}
+.product-item:hover .product-links {
+  opacity: 1;
+  right: 10px;
+}
+
+.login-form::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.single-product .wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.quantity::-webkit-inner-spin-button {
+  opacity: 1;
+}

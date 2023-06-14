@@ -4,14 +4,23 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SpendEase Store</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+rel="stylesheet"
+/>
 <link rel="stylesheet" href="css/output.css" />
 <link rel="stylesheet" href="css/custom.css" />
-
+<link rel="stylesheet" href="css/splide-custom.css" />
 <link
 rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
 />
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css"
+/>
+
+<title>SpendEase Store</title>
 </head>
 <body>
 <header
@@ -160,156 +169,31 @@ class="bi bi-search absolute right-6 top-[10px] cursor-pointer"
 
 
 </section>
+
 <section class="single-product w-full  h-full overflow invisible opacity-100 fixed lg:top-1/4 md:top-[16%] -top-8 -left-6 2xl:left-[20%] xl:left-[13%]  block z-50">
 
-  <div class="wrapper w-[60rem] flex bg-white lg:flex-row h-max flex-col md:gap-36 gap-12 p-14 relative">
-  
-  </div>
-  </section>
-<div class="location w-full">
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4235.100142984591!2d-0.20966776338762388!3d51.51840648470011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1685831826003!5m2!1str!2str"
-width="100%"
-height="550"
-style="border: 0"
-allowfullscreen=""
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade"
-></iframe>
-</div>
-<section class="contact-us mb-40 mt-14">
-<div class="contact-wrapper gap-10 flex flex-col">
-<div class="contact-start">
-<h2 class="text-4xl px-11 pb-5">Here To Help</h2>
-<p class="desc text-sm px-11 text-[#555555]">
-To get help, you can reach out to the following addresses:
-</p>
-<div class="locations flex justify-around lg:flex-row flex-col gap-6">
-<div class="contact-info-container">
-<div class="logo-wrapper lg:text-left text-center py-8 px-8">
-<a class="logo text-xl"
->Spend<span class="text-purple-600">Ease</span
->&nbsp;-&nbsp;London</a
->
-</div>
-<div
-class="contact-info flex flex-col gap-y-4 px-8 lg:items-start items-center"
->
-<p class="text-sm text-[#555555]">
-Cambridge Gardens Notting Hill, London W10 6JE United Kingdom
-</p>
-<a href="tel:555 555 5555" class="text-sm text-[#555555]"
->(+900) 1234 5678 90</a
->
-<a
-href="mailto:spendEase@example.com"
-class="text-sm text-[#555555]"
->SpendEase@example.com</a
->
-<p class="text-sm text-[#555555]">
-Opening Hours: Everyday 9:00 am - 6:00 pm
-</p>
-</div>
-</div>
-<div class="contact-info-container">
-<div class="logo-wrapper lg:text-left text-center py-8 px-8">
-<a class="logo text-xl"
->Spend<span class="text-purple-600">Ease</span
->&nbsp;-&nbsp;United States</a
->
-</div>
-<div
-class="contact-info flex flex-col gap-y-4 px-8 lg:items-start items-center"
->
-<p class="w-80 text-sm text-[#555555]">
-1234 Broadway, New York, NY 10001, United States
-</p>
-<a href="tel:555 555 5555" class="text-sm text-[#555555]"
->(+900) 1234 5678 90</a
->
-<a
-href="mailto:spendEase@example.com"
-class="text-sm text-[#555555]"
->SpendEase@example.com</a
->
-<p class="text-sm text-[#555555]">
-Opening Hours: Everyday 9:00 am - 6:00 pm
-</p>
-</div>
-</div>
-<div class="contact-info-container">
-<div class="logo-wrapper lg:text-left text-center py-8">
-<a class="logo text-xl"
->Spend<span class="text-purple-600">Ease</span
->&nbsp;-&nbsp;Germany</a
->
-</div>
-<div
-class="contact-info flex flex-col gap-y-4 lg:items-start items-center"
->
-<p class="w-80 text-sm text-[#555555]">
-Mehringdamm 50, 10961 Berlin, Germany
-</p>
-<a href="tel:555 555 5555" class="text-sm text-[#555555]"
->(+900) 1234 5678 90</a
->
-<a
-href="mailto:spendEase@example.com"
-class="text-sm text-[#555555]"
->SpendEase@example.com</a
->
-<p class="text-sm text-[#555555]">
-Opening Hours: Everyday 9:00 am - 6:00 pm
-</p>
-</div>
-</div>
-</div>
-</div>
-<div class="get-in-touch flex flex-col gap-7">
-<div class="header">
-<h2 class="title text-3xl px-14 pb-5 font-medium">Get In Touch</h2>
-<p class="desc text-sm text-[#555555] px-14">
-Your customer feedback is valuable to us. It helps us enhance our
-service quality and improve customer satisfaction. Thank you for
-taking the time to share your thoughts with us!
-</p>
-</div>
+<div class="wrapper w-[60rem] flex bg-white lg:flex-row h-max flex-col md:gap-36 gap-12 p-14 relative">
 
-<form class="contact-form flex flex-col gap-6">
-<div class="customer-info flex justify-evenly gap-4">
-<input
-type="text"
-placeholder="Name"
-class="w-full p-3 placeholder:text-[13px] border border-[#555555] ml-14 outline-none focus:border focus:border-slate-700 rounded-md"
-/>
-<input
-type="email"
-placeholder="Email"
-class="w-full p-3 placeholder:text-[13px] border border-[#555555] mr-14 outline-none focus:border focus:border-slate-700 rounded-md"
-/>
-</div>
-<div class="comment flex">
-<textarea
-class="w-full mx-14 p-3 placeholder:text-[13px] border border-[#555555] outline-none focus:border focus:border-slate-700 rounded-md"
-rows="7"
-placeholder="Comment"
-></textarea>
-</div>
-<div class="flex items-center gap-x-2 ml-14">
-<input type="checkbox" id="checkbox" class="h-4 w-4  accent-black" />
-<label for="checkbox" class="text-[#555555]">
-Save my name, email, and website in this browser for the next
-time I comment.</label
->
-</div>
-<div>
-<button class="p-4 w-48 bg-black text-white rounded-[40px] ml-14 text-sm" type="button">Send Message</button>
-
-</div>
-</form>
-</div>
 </div>
 </section>
+<section class="wishlist mb-40 relative flex justify-center items-center">
+<h1 class="text-5xl absolute top-24 ">Wishlist</h1>
+<div class="absolute top-40 z-10 wishlist-desc">
+<div class="flex justify-center items-center gap-1">
+<a href="/" class="text-center">Home</a>
+<span>/</span>
+<a class="text-[#555555]">Wishlist</a>
+
+</div>
+<p class="text-center pt-12">No products were added to the wishlist page. <a href="/shop" class="underline hover:text-gray-500">Back to shopping</a></p>
+</div>
+
+<div class=" w-full pt-5 flex justify-center items-center relative">
+<ul class=" wishlist-wrapper grid lg:grid-cols-4  md:grid-cols-2 grid-cols-1 mb-20 md:mx-12 mx-4  w-full gap-y-4 mt-[13rem]">
+</ul>
+</div>
+</section>
+
 <section class="policy pb-6 mb-20 border-b border-[#f2f2f2]">
 <div class="policy-wrapper w-full  border-t border[#f2f2f2]">
 <ul class="policy-list flex md:flex-row flex-col md:m-0 ml-11 justify-around pt-6">
@@ -325,8 +209,8 @@ time I comment.</label
 <i class="bi bi-headset lg:text-5xl text-3xl"></i>
 <div class="policy-desc ">
 <h3 class="font-semibold lg:text-base text-sm">
-SUPPORT 24/7</h3>
-<p class="text-xs">Online 24 hours</p>
+  SUPPORT 24/7</h3>
+  <p class="text-xs">Online 24 hours</p>
 </div>
 </li>
 <li class="policy-item flex items-center gap-x-5">
@@ -427,5 +311,6 @@ Developed By MericK
 </div>
 </footer>
 <script src="js/main.js" type="module"></script>
+
 </body>
 </html>
