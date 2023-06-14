@@ -1,6 +1,6 @@
 import { wishlistFunc } from "./wishlist.js";
 let cart = [];
-const products = JSON.parse(localStorage.getItem("products"));
+const products =localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")): []
 
 const productFunc = () => {
   const productWrapper = document.querySelectorAll(".products-list");
@@ -325,7 +325,7 @@ export const cartSubtotal = () => {
     });
   }
 };
-export const productsFunc = () => {
+ export const  productsFunc = () => {
   productFunc();
   addToCart();
   productRoute();

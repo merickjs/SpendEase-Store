@@ -24,7 +24,7 @@ const addToWishlist = () => {
     
     removeFromWishlist()  
     displayWishlist()
-    wishlistCount.innerHTML = wishlist.length
+wishlistCount && wishlist?     wishlistCount.innerHTML = wishlist.length : "";
 
 };
 
@@ -36,6 +36,7 @@ const wishlistdesc= document.querySelector(".wishlist-desc")
 
 wishlist = JSON.parse(localStorage.getItem("wishlist"));
 let result ="";
+if(wishlist){
 wishlist.forEach((item) => {
   if(wishlistWrapper){
   result+= `
@@ -110,6 +111,7 @@ wishlist.forEach((item) => {
   `}
 })
 }
+}
 
 const removeFromWishlist = () => {
 const removeWishBtn = document.querySelectorAll(".remove-from-wishlist") 
@@ -123,7 +125,8 @@ removeWishBtn.forEach((button) => {
   wishlist = wishlist = wishlist.filter((wish) => wish.id !== Number(id))
   
   localStorage.setItem("wishlist", JSON.stringify(wishlist))
-wishlistCount.innerHTML = wishlist.length
+  
+wishlistCount ? wishlistCount.innerHTML = wishlist.length : "";
 
   displayWishlist()
     addToWishlist()
