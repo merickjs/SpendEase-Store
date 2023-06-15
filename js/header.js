@@ -68,21 +68,9 @@ const header = () => {
     ) {
       LoginForm.classList.add("invisible");
     }
-    
+
     login_Register();
   });
-  
-  headerLinks.forEach((headerLink) => {
-    headerLink.addEventListener("click", (e) => {
-      
-      headerLinks.forEach((e) => {
-        e.target.classList.remove("text-red-600");
-        
-      });
-      e.target.classList.add("text-red-600");
-    });
-  });
-
 };
 const login_Register = () => {
   const createAccountBtn = document.getElementById("create-account");
@@ -124,7 +112,6 @@ const login_Register = () => {
   CloseLoginForm.addEventListener("click", () => {
     LoginForm.classList.toggle("invisible");
   });
-  
 };
 
 export default header();
