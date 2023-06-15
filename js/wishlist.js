@@ -5,26 +5,30 @@ const wishlistCount = document.querySelector(".wishlist-count")
 
 const addToWishlist = () => {
     const addToWishlistBtn = document.querySelectorAll(".add-to-wishlist");
-  wishlist = JSON.parse(localStorage.getItem("wishlist"));
+  wishlist = localStorage.getItem("wishlist") ? JSON.parse(localStorage.getItem("wishlist")) : []
     addToWishlistBtn.forEach((button) => {
       const id = button.dataset.id;
       const findWish = products.find((product) => product.id === Number(id));
-      const incart = wishlist.find((wish) => wish.id === Number(id));
-      if (incart) {
-        button.setAttribute("disabled", "disabled");
-      } else {
-        button.addEventListener("click", () => {
-          wishlist.push(findWish);
-          localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      
+
+        const incart =   wishlist.find((wish) => wish.id === Number(id)) 
+        if (incart) {
           button.setAttribute("disabled", "disabled");
-          wishlistCount.innerHTML = wishlist.length
-        });
-      }
-    });
+        } else {
+          button.addEventListener("click", () => {
+            wishlist.push(findWish);
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            button.setAttribute("disabled", "disabled");
+            wishlistCount.innerHTML = wishlist.length
+          });
+        }
+      
+      });
     
     removeFromWishlist()  
     displayWishlist()
-wishlistCount && wishlist?     wishlistCount.innerHTML = wishlist.length : "";
+    localStorage.setItem("wishlist", JSON.stringify(wishlist))
+wishlistCount && wishlist ?     wishlistCount.innerHTML = wishlist.length : "";
 
 };
 

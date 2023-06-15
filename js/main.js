@@ -9,9 +9,9 @@ window.onbeforeunload = () =>{
     const data = await response.json()
     localStorage.setItem("products", JSON.stringify(data))
 
+    wishlistFunc()
   })()
 }
-wishlistFunc()
 productsFunc()  
 
 
