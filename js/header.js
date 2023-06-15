@@ -73,12 +73,13 @@ const header = () => {
   });
   
   headerLinks.forEach((headerlink) => {
-    headerlink.addEventListener("click", () => {
+    headerlink.addEventListener("click", (e) => {
+      e.preventDefault()
       headerLinks.forEach((item) => {
         item.classList.remove("text-red-600");
         
       });
-      headerlink.classList.add("text-red-700");
+      headerlink.classList.add("text-red-600");
     });
   });
 
