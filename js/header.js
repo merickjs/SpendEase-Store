@@ -76,8 +76,9 @@ const header = () => {
     headerlink.addEventListener("click", () => {
       headerLinks.forEach((item) => {
         item.classList.remove("text-red-600");
+        
       });
-      headerlink.classList.add("text-red-600");
+      headerlink.classList.add("text-red-700");
     });
   });
 
