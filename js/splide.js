@@ -48,10 +48,7 @@ productWrapper2 && new Splide(".product-wrapper2", config2).mount();
 productWrapper3 && new Splide(".product-wrapper3", config2).mount();
 productWrapper3 && new Splide(".product-wrapper4", config2).mount();
 
-
-  const splidePlayBtn = document.querySelectorAll(".splide-play");
-  for (let i = 0; i < splidePlayBtn.length; i++) {
-    splidePlayBtn[i].click();
-    
-  }
-
+const splidePlayBtn = document.querySelectorAll(".splide-play");
+for (let i = 0; i < splidePlayBtn.length; i++) {
+  splidePlayBtn[i].click();
+}

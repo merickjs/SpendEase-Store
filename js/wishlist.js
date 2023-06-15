@@ -1,48 +1,46 @@
 let products = JSON.parse(localStorage.getItem("products"));
 
-let wishlist = []
-const wishlistCount = document.querySelector(".wishlist-count")
+let wishlist = [];
+const wishlistCount = document.querySelector(".wishlist-count");
 
 const addToWishlist = () => {
-    const addToWishlistBtn = document.querySelectorAll(".add-to-wishlist");
-  wishlist = localStorage.getItem("wishlist") ? JSON.parse(localStorage.getItem("wishlist")) : []
-    addToWishlistBtn.forEach((button) => {
-      const id = button.dataset.id;
-      const findWish = products.find((product) => product.id === Number(id));
-      localStorage.setItem("wishlist", JSON.stringify(wishlist))
-        const incart =   wishlist.find((wish) => wish.id === Number(id)) 
-        if (incart) {
-          button.setAttribute("disabled", "disabled");
-        } else {
-          button.addEventListener("click", () => {
-            wishlist.push(findWish);
-            localStorage.setItem("wishlist", JSON.stringify(wishlist));
-            button.setAttribute("disabled", "disabled");
-            wishlistCount.innerHTML = wishlist.length
-          });
-        }
-      
+  const addToWishlistBtn = document.querySelectorAll(".add-to-wishlist");
+  wishlist = localStorage.getItem("wishlist")
+    ? JSON.parse(localStorage.getItem("wishlist"))
+    : [];
+  addToWishlistBtn.forEach((button) => {
+    const id = button.dataset.id;
+    const findWish = products.find((product) => product.id === Number(id));
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    const incart = wishlist.find((wish) => wish.id === Number(id));
+    if (incart) {
+      button.setAttribute("disabled", "disabled");
+    } else {
+      button.addEventListener("click", () => {
+        wishlist.push(findWish);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        button.setAttribute("disabled", "disabled");
+        wishlistCount.innerHTML = wishlist.length;
       });
-    
-    removeFromWishlist()  
-    displayWishlist()
+    }
+  });
 
-wishlistCount && wishlist ?     wishlistCount.innerHTML = wishlist.length : "";
+  removeFromWishlist();
+  displayWishlist();
 
+  wishlistCount && wishlist ? (wishlistCount.innerHTML = wishlist.length) : "";
 };
 
 const displayWishlist = () => {
-const wishlistWrapper = document.querySelector(".wishlist-wrapper")
-const wishlistdesc= document.querySelector(".wishlist-desc")
+  const wishlistWrapper = document.querySelector(".wishlist-wrapper");
+  const wishlistdesc = document.querySelector(".wishlist-desc");
 
-
-
-wishlist = JSON.parse(localStorage.getItem("wishlist"));
-let result ="";
-if(wishlist){
-wishlist.forEach((item) => {
-  if(wishlistWrapper){
-  result+= `
+  wishlist = JSON.parse(localStorage.getItem("wishlist"));
+  let result = "";
+  if (wishlist) {
+    wishlist.forEach((item) => {
+      if (wishlistWrapper) {
+        result += `
   <li
   class="  product-item flex flex-col w-[20rem] h-full relative"
 >
@@ -101,40 +99,40 @@ wishlist.forEach((item) => {
 
   `;
 
-  wishlistWrapper.innerHTML = result;
+        wishlistWrapper.innerHTML = result;
 
-  removeFromWishlist()
-  }
-  if(wishlistWrapper){
-  wishlistdesc.innerHTML = `
+        removeFromWishlist();
+      }
+      if (wishlistWrapper) {
+        wishlistdesc.innerHTML = `
   <div class="flex justify-center items-center gap-1">
   <a href="/" class="text-center">Home</a>
   <span>/</span>
   <a class="text-[#555555]">Wishlist</a>
-  `}
-})
-}
-}
+  `;
+      }
+    });
+  }
+};
 
 const removeFromWishlist = () => {
-const removeWishBtn = document.querySelectorAll(".remove-from-wishlist") 
-const wishlistWrapper = document.querySelector(".wishlist-wrapper")
-const wishlistdesc= document.querySelector(".wishlist-desc")
+  const removeWishBtn = document.querySelectorAll(".remove-from-wishlist");
+  const wishlistWrapper = document.querySelector(".wishlist-wrapper");
+  const wishlistdesc = document.querySelector(".wishlist-desc");
 
+  removeWishBtn.forEach((button) => {
+    const id = button.dataset.id;
+    button.addEventListener("click", () => {
+      wishlist = wishlist = wishlist.filter((wish) => wish.id !== Number(id));
 
-removeWishBtn.forEach((button) => {
-  const id  = button.dataset.id
-  button.addEventListener("click", () => {
-  wishlist = wishlist = wishlist.filter((wish) => wish.id !== Number(id))
-  
-  localStorage.setItem("wishlist", JSON.stringify(wishlist))
-  
-wishlistCount ? wishlistCount.innerHTML = wishlist.length : "";
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
-  displayWishlist()
-    addToWishlist()
-    if(wishlist.length === 0  && wishlistdesc){
-      wishlistdesc.innerHTML = `
+      wishlistCount ? (wishlistCount.innerHTML = wishlist.length) : "";
+
+      displayWishlist();
+      addToWishlist();
+      if (wishlist.length === 0 && wishlistdesc) {
+        wishlistdesc.innerHTML = `
 <div class="flex justify-center items-center gap-1">
       <a href="/" class="text-center">Home</a>
       <span>/</span>
@@ -142,19 +140,16 @@ wishlistCount ? wishlistCount.innerHTML = wishlist.length : "";
 
     </div>
     <p class="text-center pt-12">No products were added to the wishlist page. <a href="/shop" class="underline hover:text-gray-500">Back to shopping</a></p>
-`
-;
+`;
 
-wishlistWrapper.innerHTML = "";
-    }
-  })
-})
+        wishlistWrapper.innerHTML = "";
+      }
+    });
+  });
+};
 
-}
-
-export const wishlistFunc =() => {
-  
+export const wishlistFunc = () => {
   addToWishlist();
-displayWishlist()
-removeFromWishlist()
-} 
+  displayWishlist();
+  removeFromWishlist();
+};
