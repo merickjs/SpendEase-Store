@@ -9,8 +9,7 @@ const addToWishlist = () => {
     addToWishlistBtn.forEach((button) => {
       const id = button.dataset.id;
       const findWish = products.find((product) => product.id === Number(id));
-      
-
+      localStorage.setItem("wishlist", JSON.stringify(wishlist))
         const incart =   wishlist.find((wish) => wish.id === Number(id)) 
         if (incart) {
           button.setAttribute("disabled", "disabled");
@@ -27,7 +26,7 @@ const addToWishlist = () => {
     
     removeFromWishlist()  
     displayWishlist()
-    localStorage.setItem("wishlist", JSON.stringify(wishlist))
+
 wishlistCount && wishlist ?     wishlistCount.innerHTML = wishlist.length : "";
 
 };
