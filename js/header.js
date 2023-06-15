@@ -71,19 +71,6 @@ const header = () => {
     
     login_Register();
   });
-  
-  headerLinks.forEach((headerlink) => {
-    headerlink.addEventListener("click", (e) => {
-      
-      headerLinks.forEach((item) => {
-        item.classList.remove("text-red-600");
-        
-      });
-      headerlink.classList.add("text-red-600");
-      e.preventDefault()
-    });
-  });
-
 };
 const login_Register = () => {
   const createAccountBtn = document.getElementById("create-account");
