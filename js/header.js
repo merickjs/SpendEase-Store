@@ -68,17 +68,19 @@ const header = () => {
     ) {
       LoginForm.classList.add("invisible");
     }
-    headerLinks.forEach((headerlink) => {
-      headerlink.addEventListener("click", () => {
-        headerLinks.forEach((item) => {
-          item.classList.remove("text-red-600");
-        });
-        headerlink.classList.add("text-red-600");
-      });
-    });
-
+    
     login_Register();
   });
+  
+  headerLinks.forEach((headerlink) => {
+    headerlink.addEventListener("click", () => {
+      headerLinks.forEach((item) => {
+        item.classList.remove("text-red-600");
+      });
+      headerlink.classList.add("text-red-600");
+    });
+  });
+
 };
 const login_Register = () => {
   const createAccountBtn = document.getElementById("create-account");
@@ -120,6 +122,7 @@ const login_Register = () => {
   CloseLoginForm.addEventListener("click", () => {
     LoginForm.classList.toggle("invisible");
   });
+  
 };
 
 export default header();
