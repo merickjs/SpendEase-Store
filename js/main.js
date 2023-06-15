@@ -10,7 +10,7 @@ window.onbeforeunload = () => {
     localStorage.setItem("products", JSON.stringify(data));
   })();
 };
-window.onload = () =>{
-wishlistFunc();
-productsFunc();
+window.onloadstart = () => {
+  wishlistFunc();
+  productsFunc();
 }
