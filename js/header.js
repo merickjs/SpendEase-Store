@@ -72,8 +72,8 @@ const header = () => {
     login_Register();
   });
   
-  headerLinks.forEach((e) => {
-    e.target.addEventListener("click", () => {
+  headerLinks.forEach((headerLink) => {
+    headerLink.addEventListener("click", (e) => {
       
       headerLinks.forEach((e) => {
         e.target.classList.remove("text-red-600");
