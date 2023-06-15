@@ -68,7 +68,7 @@ const header = () => {
     ) {
       LoginForm.classList.add("invisible");
     }
-    
+
     login_Register();
   });
 };
@@ -112,7 +112,6 @@ const login_Register = () => {
   CloseLoginForm.addEventListener("click", () => {
     LoginForm.classList.toggle("invisible");
   });
-  
 };
 
 export default header();
