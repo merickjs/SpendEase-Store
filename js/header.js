@@ -72,14 +72,14 @@ const header = () => {
     login_Register();
   });
   
-  headerLinks.forEach((headerlink) => {
-    headerlink.addEventListener("click", () => {
+  headerLinks.forEach((e) => {
+    e.target.addEventListener("click", () => {
       
-      headerLinks.forEach((item) => {
-        item.classList.remove("text-red-600");
+      headerLinks.forEach((e) => {
+        e.target.classList.remove("text-red-600");
         
       });
-      headerlink.classList.add("text-red-600");
+      e.target.classList.add("text-red-600");
     });
   });
 
