@@ -73,8 +73,8 @@ const header = () => {
   });
   
   headerLinks.forEach((headerlink) => {
-    headerlink.addEventListener("click", (e) => {
-      e.preventDefault()
+    headerlink.addEventListener("click", () => {
+      
       headerLinks.forEach((item) => {
         item.classList.remove("text-red-600");
         
