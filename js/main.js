@@ -12,4 +12,7 @@ window.onbeforeunload =  () => {
 }
 
 wishlistFunc()  
-productsFunc()
+setTimeout(() => {
+  productsFunc()
+  
+}, 2000);
