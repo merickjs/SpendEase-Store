@@ -1,6 +1,6 @@
-import  productsFunc  from "./products-cart.js";
+import { productsFunc } from "./products-cart.js";
 import header from "./header.js";
-import  wishlistFunc  from "./wishlist.js";
+import { wishlistFunc } from "./wishlist.js";
 import search from "./search.js";
 window.onbeforeunload =  () => {
   const getData = (async () => {
@@ -11,5 +11,7 @@ window.onbeforeunload =  () => {
 
 }
 
-// wishlistFunc()  
-// productsFunc()
+wishlistFunc()  
+document.addEventListener("DOMContentLoaded" ,() => {
+  productsFunc()
+})
