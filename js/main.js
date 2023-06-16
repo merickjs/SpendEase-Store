@@ -1,6 +1,7 @@
 import { productsFunc } from "./products-cart.js";
 import header from "./header.js";
 import search from "./search.js";
+document.addEventListener("DOMContentLoaded" ,() => {
 
 window.onbeforeunload =  () => {
   const getData = (async () => {
@@ -11,6 +12,5 @@ window.onbeforeunload =  () => {
 
 }
 
-document.addEventListener("DOMContentLoaded" ,() => {
   productsFunc()
 })
