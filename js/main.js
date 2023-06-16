@@ -1,7 +1,5 @@
 import { productsFunc } from "./products-cart.js";
-import header from "./header.js";
 import { wishlistFunc } from "./wishlist.js";
-import search from "./search.js";
 window.onbeforeunload =  () => {
   const getData = (async () => {
     const response = await fetch("/js/data.json");
@@ -16,3 +14,5 @@ setTimeout(() => {
   productsFunc()
   
 }, 2000);
+import header from "./header.js";
+import search from "./search.js";
