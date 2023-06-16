@@ -3,14 +3,17 @@ import header from "./header.js";
 import search from "./search.js";
 
 window.onbeforeunload = () =>{
-
+  
   const getData =  () => {
-  fetch('/js/data.json')
-  .then(response => response.json())
-  .then(data => localStorage.setItem("products",JSON.stringify(data))
-  )
-  .catch(error => console.error(error));
+    fetch('/js/data.json')
+    .then(response => response.json())
+    .then(data => localStorage.setItem("products",JSON.stringify(data))
+    )
+    .catch(error => console.error(error));
+  }
+  getData()
 }
-getData()
-}
-productsFunc()
+document.addEventListener("DOMContentLoaded", () => {
+
+  productsFunc()
+})
