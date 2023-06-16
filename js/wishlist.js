@@ -148,8 +148,9 @@ const removeFromWishlist = () => {
   });
 };
 
-export const wishlistFunc = () => {
+ const wishlistFunc = () => {
   addToWishlist();
   displayWishlist();
   removeFromWishlist();
 };
+export default wishlistFunc;

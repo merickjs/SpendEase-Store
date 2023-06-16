@@ -1,4 +1,4 @@
-import { wishlistFunc } from "./wishlist.js";
+import  wishlistFunc  from "./wishlist.js";
 let cart = [];
 const products =localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")): []
 
@@ -325,9 +325,11 @@ export const cartSubtotal = () => {
     });
   }
 };
- export const  productsFunc = () => {
+  const  productsFunc = () => {
   productFunc();
   addToCart();
   productRoute();
   cartSubtotal();
 };
+
+  export default productFunc()
